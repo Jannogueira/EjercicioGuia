@@ -69,7 +69,7 @@ void *AtenderCliente (void *socket)
 			int fin = strlen(nombre) - 1;
 			int no = 0;
 			
-			while (inicio < fin || no == 0) {
+			while (inicio < fin && no == 0) {
 				// Ignoramos las diferencias de mayúsculas y minúsculas
 				if (tolower(nombre[inicio]) != tolower(nombre[fin])) {
 					no++; // La cadena no es palíndroma
